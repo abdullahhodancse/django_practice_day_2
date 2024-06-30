@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin:20px;">
+    {% for i in meals %}
+        <div class="card" style="width: 18rem; display: flex; flex-direction: column;">
+            <img src="{{ i.strMealThumb }}" class="card-img-top" alt="Meal Pic" style="width: 100%;">
+            <div class="card-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h5 class="card-title">{{ i.strMeal }}</h5>
+                    <h5 class="card-text">{{ i.idMeal }}</h5>
+                </div>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}
